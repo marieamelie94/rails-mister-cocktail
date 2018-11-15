@@ -1,0 +1,11 @@
+<h1>Doses</h1>
+<% @dose.each do |r| %>
+<ul>
+  <li>
+  <p>
+  <% i = Ingredient.find(r.ingredient_id) %> <%= i.name.capitalize %>: <%= r.description %> </p>
+
+  </li>
+<% end %>
+</ul>
+<div class="btn btn-default"><%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail)%></div>

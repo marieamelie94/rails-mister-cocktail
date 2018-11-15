@@ -1,0 +1,14 @@
+
+<h2>Tasty Cocktails</h2>
+
+<div class="rows">
+
+<% @cocktails.each do |r| %>
+  <div class="col-sm-4">
+    <%= link_to r.name.capitalize, "/cocktails/#{r.id}"%>
+  </div>
+<% end %>
+</div>
+
+ <div class="btn btn-default">  <%= link_to "Create Cocktail", new_cocktail_path %></div>
+
