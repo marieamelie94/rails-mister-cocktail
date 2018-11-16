@@ -1,11 +1,9 @@
 
-<h2>Tasty Cocktails</h2>
-
 <div class="rows">
 
 <% @cocktails.each do |r| %>
-  <div class="col-sm-4">
-    <%= link_to r.name.capitalize, "/cocktails/#{r.id}"%>
+  <div class="col-sm-4 card">
+    <div class = "card-description card-link"><%= link_to r.name.capitalize, "/cocktails/#{r.id}"%></div>
   </div>
 <% end %>
 </div>
