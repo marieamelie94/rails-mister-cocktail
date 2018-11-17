@@ -5,6 +5,8 @@
   background-position: center;
   color: white;
   position: relative;
+  margin-bottom: 60px;
+
 }
 .card-user {
   position: absolute;
@@ -15,15 +17,17 @@
 }
 .card-category {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
   font-size: 15px;
   text-transform: uppercase;
 }
+
 .card-description {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 20px;
+  left: 20px;
+  color: white;
 }
 .card-description h2 {
   font-size: 24px;
@@ -32,7 +36,14 @@
   font-size: 14px;
   opacity: 0.7;
   font-weight: lighter;
+  text-decoration: none;
 }
+
+ .btn-default {
+  background-color: #ffffff75 !important;
+  text-decoration: none;
+}
+
 .card-link {
   position: absolute;
   top: 0;

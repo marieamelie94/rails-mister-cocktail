@@ -1,12 +1,33 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://res.cloudinary.com/mas-cloud/image/upload/v1542386985/cocktailbanner.jpg');">
+  <div class="banner-content">
+    <h1>The Cocktail</h1>
+  </div>
+</div>
+
 
 <div class="rows">
 
 <% @cocktails.each do |r| %>
-  <div class="col-sm-4 card">
-    <div class = "card-description card-link"><%= link_to r.name.capitalize, "/cocktails/#{r.id}"%></div>
+  <div class="card col-sm-4">
+    <%= cl_image_tag("cocktail#{r.id}.jpg", height: 220, width: 300, crop: :fill) %>
+    <div class = "card-description"> <h2> <%= r.name.capitalize %> </h2> </div>
+     <div class="card-category btn btn-default btn-sm"><%= link_to "See", "/cocktails/#{r.id}"%></div>
   </div>
 <% end %>
-</div>
 
- <div class="btn btn-default">  <%= link_to "Create Cocktail", new_cocktail_path %></div>
+  <div class="card col-sm-4">
+    <%= cl_image_tag("cocktailcreate.jpg", height: 220, width: 300, crop: :fill) %>
+    <div class = "card-description"> <h2> Create yours </h2> </div>
+     <div class="card-category btn btn-default btn-sm"><%= link_to "New", new_cocktail_path %></div>
+  </div>
+
+<% @cocktails.each do |r| %>
+  <div class="card col-sm-4">
+    <%= cl_image_tag("cocktail#{r.id}.jpg", height: 220, width: 300, crop: :fill) %>
+    <div class = "card-description"> <h2> <%= r.name.capitalize %> </h2> </div>
+     <div class="card-category btn btn-default btn-sm"><%= link_to "See", "/cocktails/#{r.id}"%></div>
+  </div>
+<% end %>
+
+</div>
 
